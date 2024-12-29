@@ -1,13 +1,29 @@
 \section{実験方法}
-実験手順を以下に示す.
+実験手順を以下に示す. アプローチの可否は目視で判断する.
+\figref{Fig:success}のようにピーマンがエンドエフェクタの収穫範囲内に入った場合は成功, \figref{Fig:failure}のように茎や葉などの収穫対象以外のものを巻き込んで把持, または切断しそうな場合は失敗とした.
 \begin{enumerate}
   \item ピーマンの正面にエンドエフェクタが位置するように実験装置を配置する
   \item 実験装置をスライドさせ, ピーマン株に対して垂直方向にエンドエフェクタをアプローチさせる.
   \item アプローチの可否を判断
   \begin{description}
-    \item[成功条件] ピーマンがエンドエフェクタの収穫範囲内に入る
-    \item[失敗条件] 収穫対象の果実と花柄以外のものに接触する, または収穫範囲内に収穫対象以外のものが含まれている
+    \item[成功条件] ピーマンがエンドエフェクタの収穫範囲内に入った場合
+    \item[失敗条件] 収穫対象以外のものを巻き込んで把持, または切断しそうな場合
   \end{description}
   \item 各エンドエフェクタモデルで手順1\verb|〜|3を30個のピーマンに対して行う
   \item 実環境での成功率と設計指標から求めた成功率を比較する
 \end{enumerate}
+
+\vspace{5mm}
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=110mm]{images/png/success.png}
+     \caption{Examples of successful approaches}
+     \label{Fig:success}
+   \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=110mm]{images/png/failure.png}
+    \caption{Examples of failed approaches}
+    \label{Fig:failure}
+  \end{figure}
