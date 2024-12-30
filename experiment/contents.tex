@@ -27,3 +27,35 @@
     \caption{Examples of failed approaches}
     \label{Fig:failure}
   \end{figure}
+
+設計指標から成功率を算出するため, 各エンドエフェクタモデルの成功率について考える.
+各エンドエフェクタモデルがアプローチする場所は \tabref{Tab:approach}のように予想される.
+
+\begin{table}[htbp]
+  \begin{center}
+    \scalebox{0.7}{
+    \begin{tabular}{l|cccccc}
+      model & front of fruit & side of fruit & above of fruit & under fruit & front of peduncle & side of peduncle\\ \hline\hline
+      gripper type & ○ & ○ & - & - & ○ & ○\\
+      vibrating knife type & - & - & ○ & ○ & ○ & ○\\
+      peduncle approach type & - & - & - & - & ○ & ○\\
+    \end{tabular}
+    }
+    \caption{Approach area of each model}
+    \label{Tab:approach}
+  \end{center}
+\end{table}
+
+これを踏まえると設計指標からの成功率は以下のようになる.
+
+グリッパ型の成功率\\
+\vspace{5mm}
+$p_h = p(d_p > l_p \cap S_p > S_papproach \cap d_fside > l_fside \cap S_f > S_fapproach)$
+
+振動ナイフ型の成功率\\
+\vspace{5mm}
+$p_h = p(d_p > l_p \cap S_p > S_papproach \cap d_fabove > l_fabove \cap d_funder > l_funder)$
+
+花柄アプローチ型の成功率\\
+\vspace{5mm}
+$p_h = p(d_p > l_p \cap S_p > S_papproach)$
